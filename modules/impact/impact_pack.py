@@ -593,7 +593,7 @@ class DetailerForEachAutoRetry:
                                                                     cycle=cycle, inpaint_model=inpaint_model, noise_mask_feather=noise_mask_feather,
                                                                     scheduler_func=scheduler_func_opt, vae_tiled_encode=tiled_encode,
                                                                     vae_tiled_decode=tiled_decode)
-                
+
                     if detailer_hook is None or not detailer_hook.should_retry_patch(enhanced_image):
                         break
 
@@ -650,7 +650,7 @@ class DetailerForEachAutoRetry:
             DetailerForEachAutoRetry.do_detail(image, segs, model, clip, vae, guide_size, guide_size_for, max_size, seed, steps,
                                       cfg, sampler_name, scheduler, positive, negative, denoise, feather, noise_mask,
                                       force_inpaint, wildcard, detailer_hook,
-                                      cycle=cycle, inpaint_model=inpaint_model, noise_mask_feather=noise_mask_feather, 
+                                      cycle=cycle, inpaint_model=inpaint_model, noise_mask_feather=noise_mask_feather,
                                       scheduler_func_opt=scheduler_func_opt, tiled_encode=tiled_encode, tiled_decode=tiled_decode, max_retries=max_retries)
 
         return (enhanced_img, )
